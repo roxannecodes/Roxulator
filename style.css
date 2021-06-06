@@ -1,0 +1,77 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background-image:url("halftone-yellow.png");
+  background-size: cover;
+  padding-top:0.5em;
+  padding-bottom:1em;
+  align-items: center;
+  justify-content: center;
+   font-family: 'Limelight', cursive;
+}
+
+h1{
+text-align:center;
+ font-family: 'Limelight', cursive;
+ opacity: 0.8;
+ font-size:4em;
+
+}
+
+/* limit the width and center */
+.calculator {
+  max-width: 550px;
+  margin: 0 auto;
+  border: 5px solid black;
+  border-radius: 9px;
+}
+
+.calculator-buttons{
+  background:none;
+ 
+}
+
+.calc-button{
+  background-color: white;
+  border: 2.5px solid black; 
+  padding: 20px;
+  color:black;
+  border-radius: 15px; 
+  font-size: 25px; 
+  cursor: pointer;
+  font-family: 'Limelight', cursive;
+}
+
+.calculator input{
+ 
+  background: none;
+  border: none;
+ 
+
+  padding: 10px;
+  width: 100%;
+  border-bottom: 2px solid #111;
+  color: #333;
+  text-align: right;
+  font-size: 40px;
+  border-radius: 0;
+}
+
+
+
+footer{
+
+color: black;
+background-color:inherit;
+
+padding:0.3em;
+font-size:15px;
+position:relative;
+top:18em;
+height:100%;
+width:100%;
+text-align: center;
+
+}
