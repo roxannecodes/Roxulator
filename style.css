@@ -28,7 +28,7 @@ text-align:center;
   align-items: center;
   justify-content: center;
   border: 5px solid black;
-  border-radius: 9px;
+  border-radius: 25px;
 }
 
 /* disabled input box */
@@ -85,7 +85,6 @@ text-align:center;
   font-weight: bolder;
   font-size: 30px;
   opacity: 0.5;
-  
 }
 
 #zero-btn{
