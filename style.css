@@ -3,14 +3,13 @@
 }
 
 body {
-  background-image:url("halftone-yellow.png");
+  background-image:url("halftone-yellow.png"); /*toptal.com*/
   background-size: cover;
-
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-   font-family: 'Limelight', cursive;
-   display: flex;
-   flex-direction: column;
+  font-family: 'Limelight', cursive;
 }
 
 .wrapper {
@@ -23,9 +22,9 @@ text-align:center;
  font-family: 'Limelight', cursive;
  opacity: 0.8;
  font-size:4em;
-
 }
-/* calc container */
+
+
 .calculator {
   max-width: 600px;
   text-align:center;
@@ -35,7 +34,6 @@ text-align:center;
   border-radius: 25px;
 }
 
-/* disabled input box */
 .calc-screen {
   background: none;
   border: none;
@@ -49,15 +47,12 @@ text-align:center;
   border-radius: 0;
 }
 
-/* buttons container */
 .calculator-buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   padding: 25px;
   grid-gap:15px;
-  
 }
-
 
 .calc-button {
   background-color: cream;
@@ -164,7 +159,7 @@ text-align:center;
   border-radius: 9px;
 }
 
-/* disabled input box */
+
 .calc-screen {
   background: none;
   border: none;
