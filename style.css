@@ -5,7 +5,6 @@
 body {
   background-image:url("halftone-yellow.png");
   background-size: cover;
-  padding-top:0.25em;
   padding-bottom:1em;
   align-items: center;
   justify-content: center;
@@ -21,9 +20,10 @@ text-align:center;
  font-size:4em;
 
 }
-
+/* calc container */
 .calculator {
-  max-width: 400px;
+  max-width: 600px;
+  max-height: 740px;
   text-align:center;
   align-items: center;
   justify-content: center;
@@ -36,6 +36,7 @@ text-align:center;
   background: none;
   border: none;
   padding: 10px;
+  height:100px;
   width: 100%;
   border-bottom: 2px solid black;
   color: black;
@@ -44,21 +45,23 @@ text-align:center;
   border-radius: 0;
 }
 
-/* container */
+/* buttons container */
 .calculator-buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   padding: 25px;
+  grid-gap:15px;
+  
 }
 
 
 .calc-button {
   background-color: cream;
   border: 2.5px solid black; 
-  padding: 30px;
+  padding: 20px;
   color:black;
   border-radius: 15px; 
-  font-size: 25px; 
+  font-size: 20px; 
   cursor: pointer;
   font-family: 'Limelight', cursive;
 }
@@ -68,6 +71,7 @@ text-align:center;
   color:white;
   font-size:30px;
   opacity: 0.5;
+  grid-column: span 3;
 }
 
 #plus-btn {
@@ -76,14 +80,18 @@ text-align:center;
 }
 
 #equals-btn {
- 
-
   color:white;
   background-color: gray;
   font-weight: bolder;
   font-size: 30px;
   opacity: 0.5;
+  
 }
+
+#zero-btn{
+  grid-column: span 3;
+}
+
 
 footer {
 color: black;
