@@ -34,7 +34,7 @@ text-align:center;
   border-radius: 25px;
 }
 
-.calc-screen {
+.display {
   background: none;
   border: none;
   padding: 10px;
@@ -47,20 +47,20 @@ text-align:center;
   border-radius: 0;
 }
 
-.calculator-buttons {
+.buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   padding: 25px;
   grid-gap:15px;
 }
 
-.calc-button {
+button {
   background-color: cream;
   border: 2.5px solid black; 
   padding: 20px;
   color:black;
   border-radius: 15px; 
-  font-size: 20px; 
+  font-size: 25px; 
   cursor: pointer;
   font-family: 'Limelight', cursive;
 }
@@ -68,41 +68,42 @@ text-align:center;
 #clear-btn  {
   background-color:grey;
   color:white;
-  font-size:30px;
+  font-size:35px;
   opacity: 0.5;
   grid-column: span 3;
 }
 
 #divide-btn {
   font-weight: bold;
-  font-size: 34px;
+  font-size: 40px;
 }
 
 #multiply-btn {
   font-weight: bolder;
-  font-size: 35px;
+  font-size: 40px;
 }
 
-#minus-btn {
+#subtract-btn {
  font-weight: bolder;
- font-size: 35px;
+ font-size: 40px;
 }
 
-#plus-btn {
+#add-btn {
   font-weight: bolder;
-  font-size: 35px;
+  font-size: 40px;
 }
 
 #equals-btn {
   color:white;
   background-color: gray;
   font-weight: bolder;
-  font-size: 30px;
+  font-size: 40px;
   opacity: 0.5;
 }
 
 #zero-btn {
   grid-column: span 3;
+  font-size:35px;
 }
 
 
@@ -168,7 +169,7 @@ text-align:center;
 }
 
 
-.calc-screen {
+.display {
   background: none;
   border: none;
   padding: 10px;
@@ -181,7 +182,7 @@ text-align:center;
 }
 
 /* container */
-.calculator-buttons {
+.buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   padding: 25px;
@@ -191,7 +192,7 @@ text-align:center;
 }
 
 
-.calc-button {
+button {
   background-color: white;
   border: 2.5px solid black; 
   padding: 30px;

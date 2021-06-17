@@ -35,4 +35,21 @@ function operate(a, operator, b) {
  }
 }
 
-operate (2,"+",2);
+//object holding data for expression
+let calculator = {
+  displayValue: '0',
+  firstOperand: null,
+  waitingForSecondOperand: false,
+  operator: null,
+};
+
+let display=document.querySelector(".calc-screen");
+display.value = calculator.displayValue;
+
+
+
+document.querySelectorAll(".calc-button").addEventListener.click = function (e) {
+  
+}
+
+let displayValue = 
