@@ -8,8 +8,7 @@ function multiply(a,b) {
 }
 
 function add(a,b){
- 
- console.log (a+b);
+
  return a + b ;
 }
 
@@ -18,24 +17,28 @@ function subtract(a, b) {
 }
 
 
-function operate(a, operator, b) {
-  if (operator==="+"){
-    return add(a,b);
+function operate(num1, operator, num2) {
+  if (operator==="+") {
+    return add(num1, num2);
   }
-  if (operator==="-"){
-    return subtract(a,b);
+  else if (operator==="-") {
+    return subtract(num1, num2);
+  }
+ else if (operator==="÷") {
+    return divide(num1, num2);
   }
 
-  if (operator==="÷"){
-    return divide(a,b);
-  }
-
- if (operator === "×"){
-   return multiply(a,b)
+ else if (operator === "×") {
+   return multiply(num1,num2)
  }
 }
 
-//object holding data for expression
+
+//DOM calc variables
+let display = document.querySelector(".display");
+let buttons = document.querySelectorAll("button");
+
+//the calculator object (initial state)
 let calculator = {
   displayValue: '0',
   firstOperand: null,
@@ -43,13 +46,15 @@ let calculator = {
   operator: null,
 };
 
-let display=document.querySelector(".calc-screen");
+
+function updateDisplay(){
+
 display.value = calculator.displayValue;
 
 
-
-document.querySelectorAll(".calc-button").addEventListener.click = function (e) {
-  
 }
 
-let displayValue = 
+
+
+//add event listeners to all buttons
+
