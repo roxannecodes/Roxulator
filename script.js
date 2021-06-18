@@ -26,11 +26,6 @@ keys.addEventListener('click', function (event) {
   //access the clicked element (destructuring assignment-- {target}=event )
   let target = event.target;
 
-  //ensure the clicked entity is a button *
-   if (!target.matches('button')) {
-    return; 
-  }
-
   if (target.classList.contains('operator')) {
     console.log('operator', target.value);
     return;
@@ -49,7 +44,7 @@ keys.addEventListener('click', function (event) {
    {console.log('digit', target.value);}
 });
 
-
+// so confused--have to go study on paper to figure out how to program main calc fxn :(
 
 
 
