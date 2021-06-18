@@ -26,6 +26,7 @@ keys.addEventListener('click', function (event) {
   //access the clicked element (destructuring assignment-- {target}=event )
   let target = event.target;
 
+
   if (target.classList.contains('operator')) {
     console.log('operator', target.value);
     return;
@@ -41,12 +42,41 @@ keys.addEventListener('click', function (event) {
     return;
   }
 
-   {console.log('digit', target.value);}
+  console.log('digit', target.value);
 });
 
-// so confused--have to go study on paper to figure out how to program main calc fxn :(
+//study break:figure out the hard stuff on paper and study mdn
 
+//Main calculation function
+function operate (num1, operator, num2) {
+  if (operator==="+") {
+    return add(num1, num2);
+  }
+  else if (operator==="-") {
+    return subtract(num1, num2);
+  }
+ else if (operator==="÷") {
+    return divide(num1, num2);
+  }
 
+ else if (operator === "×") {
+   return multiply(num1,num2)
+ }
+}
 
+//calculations
+function divide(a,b) {
+  return a / b ;
+}
 
+function multiply(a,b) {
+ return a * b ;
+}
 
+function add(a,b) {
+ return a + b ;
+}
+
+function subtract(a, b) {
+  return a - b ;
+} 
