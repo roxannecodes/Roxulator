@@ -27,7 +27,7 @@ keys.addEventListener('click', function (event) {
   let target = event.target;
 
   //ensure the clicked entity is a button *
-  if (!target.matches('button')) {
+   if (!target.matches('button')) {
     return; 
   }
 
@@ -55,36 +55,3 @@ keys.addEventListener('click', function (event) {
 
 
 
-//Main calculation function
-function operate (num1, operator, num2) {
-  if (operator==="+") {
-    return add(num1, num2);
-  }
-  else if (operator==="-") {
-    return subtract(num1, num2);
-  }
- else if (operator==="÷") {
-    return divide(num1, num2);
-  }
-
- else if (operator === "×") {
-   return multiply(num1,num2)
- }
-}
-
-//calculations
-function divide(a,b) {
-  return a / b ;
-}
-
-function multiply(a,b) {
- return a * b ;
-}
-
-function add(a,b) {
- return a + b ;
-}
-
-function subtract(a, b) {
-  return a - b ;
-} 
