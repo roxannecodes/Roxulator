@@ -47,7 +47,7 @@ text-align:center;
   border-radius: 0;
 }
 
-.buttons {
+.calc-buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   padding: 25px;
@@ -104,6 +104,10 @@ button {
 #zero-btn {
   grid-column: span 2;
   font-size:35px;
+}
+
+#decimal-btn {
+  font-size:25px;
 }
 
 
@@ -182,7 +186,7 @@ text-align:center;
 }
 
 /* container */
-.buttons {
+.calc-buttons {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   padding: 25px;

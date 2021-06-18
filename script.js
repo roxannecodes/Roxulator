@@ -2,6 +2,7 @@
 //DOM calc variables
 let display = document.querySelector(".display");
 let buttons = document.querySelectorAll("button");
+let keys=document.querySelector(".calc-btns");
 
 //the calculator object (initial state)
 let calculator = {
@@ -12,18 +13,29 @@ let calculator = {
 };
 
 
-function updateDisplay(){
-
+function updateDisplay() {
 display.value = calculator.displayValue;
+}
 
+updateDisplay();
 
+//add event listeners to all buttons (using container class ".calc-btns")
+
+keys.addEventListener("click", function (event) {
+//access the clicked element
+let { target } = event;
+
+//make sure the clicked element is a button (or exit fxn)
+if (!target.matches("button")) {
+  return;
 }
 
 
 
-//add event listeners to all buttons
+});
 
-//Maind calculation function
+
+//Main calculation function
 function operate (num1, operator, num2) {
   if (operator==="+") {
     return add(num1, num2);
