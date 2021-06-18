@@ -46,7 +46,7 @@ keys.addEventListener('click', function (event) {
     return;
   }
 
-  console.log('digit', target.value);
+   {console.log('digit', target.value);}
 });
 
 
