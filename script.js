@@ -5,7 +5,7 @@ let buttons = document.querySelectorAll('button');
 let keys = document.querySelector('.calc-buttons');
 
 
-//the calculator object (initial state)
+//the calculator object (initial state for empty expression)
 
 let calculator = {
   displayValue: '0',
@@ -28,8 +28,8 @@ keys.addEventListener('click', function (event) {
 
 
   if (target.classList.contains('operator')) {
-    console.log('operator', target.value);
-    return;
+    console.log( target.value);
+   
   }
 
   if (target.classList.contains('decimal')) {
