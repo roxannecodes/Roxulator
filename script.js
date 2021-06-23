@@ -26,10 +26,14 @@ keys.addEventListener('click', function (event) {
   //access the clicked element (destructuring assignment-- {target}=event )
   let target = event.target;
 
+  // Check if the clicked element is a button (If not, exit from the function)
+  if (!target.matches('button')) {
+    return;
+  }
 
   if (target.classList.contains('operator')) {
-    console.log( target.value);
-   
+    console.log( "operator",target.value);
+   return;
   }
 
   if (target.classList.contains('decimal')) {
