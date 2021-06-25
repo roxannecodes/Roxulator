@@ -1,18 +1,31 @@
 
-//DOM variables
+//DOM calculator variables
 let display = document.querySelector("input");
 let operator = document.querySelectorAll(".operator");
 let number = document.querySelectorAll(".digit");
 let clear = document.querySelector(".clear");
+let decimal = document.querySelector(".decimal");
+let result = document.querySelector(".equals");
 
-let decimal = document.querySelector(".decimal
-");
+// starting from scratch :(
+  
+//adding event listeners to the buttons (using parent)
 
-let equals = document.querySelector(".equals");
+let buttons = document.querySelector(".buttons");
 
-let buttons = document.querySelectorAll("button");
+buttons.addEventListener("click", function (e){
+  input.value = event.target.innerHtml;
+})
 
-//Main calculation function
+
+
+//clearing
+clear.addEventListener("click", function() {
+  input.innerHtml = "";
+});
+
+
+// *** Main calculation function ***
 function operate (num1, operator, num2) {
   if (operator==="+") {
     return add(num1, num2);

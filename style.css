@@ -10,6 +10,7 @@ body {
   align-items: center;
   justify-content: center;
   font-family: 'Limelight', cursive;
+  padding-top:1.5em;
 }
 
 .wrapper {
