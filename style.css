@@ -27,7 +27,7 @@ text-align:center;
 
 
 .calculator {
- width: 600px;
+ width: 550px;
   text-align:center;
   align-items: center;
   justify-content: center;
@@ -87,10 +87,11 @@ button {
   font-weight: bolder;
   font-size: 40px;
   opacity: 0.5;
+
 }
 
 #zero {
-  grid-column: span 2;
+   grid-column: span 2;
   font-size:35px;
 }
 

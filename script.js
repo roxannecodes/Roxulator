@@ -1,26 +1,49 @@
 
-//DOM calculator variables
+
 let display = document.querySelector(".input");
-let operators = document.querySelectorAll(".operator");
-let numbers = document.querySelectorAll(".digit");
-let clear = document.querySelector(".clear");
+
+
+//add event listeners to numbers
+let numbers = document.querySelectorAll('.digit');
+
+for (i of numbers) {
+  i.addEventListener('click', function(e) {
+    display.innerHTML=e.target.innerHTML;
+  });
+}
+
+
+//adding event listeners to all operators
+let operators= document.querySelectorAll(".operator");
+
+for (i of operators) {
+i.addEventListener("click", function (){
+  display.innerHTML = this.value;
+});
+}
+
+//adding event listener to decimal btn
 let decimal = document.querySelector(".decimal");
-let result = document.querySelector(".equals");
+
+decimal.addEventListener("click",function(){
+  display.innerHTML= this.innerHTML;
+} )
 
 
+//adding event listener to equals btn
 
-//adding event listeners to the operators
-let buttons= document.querySelector(".buttons")
+let result=document.querySelector (".equals");
 
-buttons.addEventListener("click", function (e){
-  display.innerHTML = e.target.innerHtml;
+result.addEventListener("click", function(){
+operate (num1, operator,num2);
 });
 
+//clearing the calc screen
 
+let clear = document.querySelector(".clear");
 
-//clearing
 clear.addEventListener("click", function() {
-  input.innerHtml = "";
+  location.reload();
 });
 
 
