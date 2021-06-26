@@ -1,17 +1,20 @@
 
 
 let display = document.querySelector(".input");
-
+let resultDisplayed=false;
 
 //add event listeners to numbers
-let numbers = document.querySelectorAll('.digit');
+let numbers = document.querySelectorAll(".digit");
 
 for (i of numbers) {
-  i.addEventListener('click', function(e) {
-    display.innerHTML=e.target.innerHTML;
+  i.addEventListener("click", function(e) {
+
+    let currentSTring = this.innerHTML;
+    if (resultDisplayed===false){
+    display.innerHTML += this.innerHTML;}
   });
 }
-
+ 
 
 //adding event listeners to all operators
 let operators= document.querySelectorAll(".operator");
@@ -22,15 +25,10 @@ i.addEventListener("click", function (){
 });
 }
 
-//adding event listener to decimal btn
-let decimal = document.querySelector(".decimal");
-
-decimal.addEventListener("click",function(){
-  display.innerHTML= this.innerHTML;
-} )
 
 
-//adding event listener to equals btn
+
+//adding event listener to equals btn and calling the main calculation function 
 
 let result=document.querySelector (".equals");
 
@@ -38,13 +36,6 @@ result.addEventListener("click", function(){
 operate (num1, operator,num2);
 });
 
-//clearing the calc screen
-
-let clear = document.querySelector(".clear");
-
-clear.addEventListener("click", function() {
-  location.reload();
-});
 
 
 // *** Main calculation function ***
@@ -80,3 +71,12 @@ function add(a,b) {
 function subtract(a, b) {
   return a - b ;
 } 
+
+
+//clearing the calc screen
+
+let clear = document.querySelector(".clear");
+
+clear.addEventListener("click", function() {
+  location.reload();
+});
