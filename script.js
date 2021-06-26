@@ -2,7 +2,7 @@
 
 let display = document.querySelector(".input");
 let resultDisplayed=false;
-let waitingForSecondOperand=false;
+
 
 //add click handlers to all number buttons
 let numbers = document.querySelectorAll(".digit");
@@ -10,14 +10,17 @@ let numbers = document.querySelectorAll(".digit");
 for (i of numbers) {
   i.addEventListener("click", function(e) {
     
-    let currentSTring = this.innerHTML;
-    if (resultDisplayed===false){
-    display.innerHTML += this.innerHTML;}
-
-
+ //display num1 
+    if (resultDisplayed===false ){
+    display.innerHTML += this.innerHTML;
+    }
+    
   });
 }
- 
+
+//store num1 for later (main calc function)
+let num1 = display.innerHTML;
+
 
 //adding click handlers to all operator buttons
 let operators= document.querySelectorAll(".operator");
@@ -25,9 +28,9 @@ let operators= document.querySelectorAll(".operator");
 for (i of operators) {
 i.addEventListener("click", function (){
   display.innerHTML = this.value;
+ 
 });
 }
-
 
 //adding click handler to equals btn and calling the main calculation function 
 
