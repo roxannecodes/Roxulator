@@ -67,7 +67,7 @@ button {
   font-family: 'Limelight', cursive;
 }
 
-.clear {
+.all-clear {
   background-color:grey;
   color:white;
   font-size:35px;
@@ -91,7 +91,7 @@ button {
 }
 
 #zero {
-   grid-column: span 2;
+   grid-column: ;
   font-size:35px;
 }
 
@@ -140,13 +140,10 @@ body {
  max-width: 450px;
 }
  
-
-
 .buttons {
   padding: 25px;
   grid-gap:10px;
-  position: relative;
-  right:5px;
+ 
 }
 
 button {
@@ -166,5 +163,7 @@ button {
 }
 footer {
   font-size:20px;
+ padding-bottom:25px;
+ padding-top:25px;
 }
 }
