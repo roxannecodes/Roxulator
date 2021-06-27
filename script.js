@@ -2,13 +2,14 @@
 
 let display = document.querySelector(".input");
 let resultDisplayed=false;
+let waitingForSecondOpperand=true;
 
 
 //add click handlers to all number buttons
 let numbers = document.querySelectorAll(".digit");
 
 for (i of numbers) {
-  i.addEventListener("click", function(e) {
+  i.addEventListener("click", function() {
     
  //display num1 
     if (resultDisplayed===false ){
@@ -27,17 +28,31 @@ let operators= document.querySelectorAll(".operator");
 
 for (i of operators) {
 i.addEventListener("click", function (){
+
+  if (waitingForSecondOpperand===true){
   display.innerHTML = this.value;
- 
+  }
+  else if (waitingForSecondOpperand===false){
+   //nest if statements for all 4 operators
+
+
+
+
+    display.innerHtml= operate(num1, operator, num2);
+  }
 });
 }
+
+
 
 //adding click handler to equals btn and calling the main calculation function 
 
 let result=document.querySelector (".equals");
 
 result.addEventListener("click", function(){
+
 operate (num1, operator,num2);
+
 });
 
 
