@@ -1,9 +1,7 @@
 
-
 let display = document.querySelector(".input");
 let resultDisplayed=false;
 let waitingForSecondOpperand=true;
-
 
 //add click handlers to all number buttons
 let numbers = document.querySelectorAll(".digit");
@@ -15,6 +13,7 @@ for (i of numbers) {
     if (resultDisplayed===false ){
     display.innerHTML += this.innerHTML;
     }
+
     
   });
 }
@@ -22,25 +21,31 @@ for (i of numbers) {
 //store num1 for later (main calc function)
 let num1 = display.innerHTML;
 
-
 //adding click handlers to all operator buttons
 let operators= document.querySelectorAll(".operator");
 
 for (i of operators) {
-i.addEventListener("click", function (){
+i.addEventListener("click", function() {
 
-  if (waitingForSecondOpperand===true){
+  if (waitingForSecondOpperand===true) {
   display.innerHTML = this.value;
   }
-  else if (waitingForSecondOpperand===false){
+  else if (waitingForSecondOpperand===false) {
+    display.innerHTML=this.value;
+    let operator=this.value;
    //nest if statements for all 4 operators
+   if (operator=== "+") {
 
+   }
+     
+  
 
-
-
+   
     display.innerHtml= operate(num1, operator, num2);
   }
 });
+
+
 }
 
 
@@ -106,4 +111,6 @@ let allClear = document.querySelector(".all-clear");
 allClear.addEventListener("click", function() {
   location.reload();
 });
+
+
 
