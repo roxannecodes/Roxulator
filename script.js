@@ -32,6 +32,8 @@ let operator;
 let num1;
 let num2;
 
+/*
+
 function getValues {
    if (firstChar==="+" || "-"|| "&divide;" || "&times;") {
     //first extract operator
@@ -56,7 +58,7 @@ function getValues {
     waitingForSecondOpperand=true;
 }
 
-
+*/
 
 // *** Main calculation function ***
 function operate (num1, operator, num2) {
