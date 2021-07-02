@@ -33,11 +33,11 @@ let num1;
 let num2;
 
 
-
-function getValues (){
+//function that stores/displays values for variables above and passes them to main calc function as parameters.
+function prepCalc (){
 
    if (firstChar==="+" || "-"|| "&divide;" || "&times;") {
-       //first extract operator
+       //get operator
         operator = ar[0];
         //then extract num2
         num2 = parseFloat(string);
@@ -50,14 +50,14 @@ function getValues (){
       num1= parseFloat(string);
       //update display with operator that was clicked
       display.innerHTML = this.innerHTML;
-      waitingForSecondOpperand=false;
+ 
    }
 
   display.innerHtml= operate(num1, operator, num2);
 
 }
 
-
+//prepCalc();
 
 
 // *** Main calculation function ***
@@ -79,19 +79,19 @@ function operate (num1, operator, num2) {
 
 //calculations
 function divide(a,b) {
-  return a / b ;
+  display.innerHTML = a / b ;
 }
 
 function multiply(a,b) {
- return a * b ;
+ display.innerHTML =  a * b ;
 }
 
 function add(a,b) {
- return a + b ;
+ display.innerHTML =  a + b ;
 }
 
 function subtract(a, b) {
-  return a - b ;
+  display.innerHTML = a - b ;
 } 
 
 
