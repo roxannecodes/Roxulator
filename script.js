@@ -1,7 +1,5 @@
 
-
 let display = document.querySelector(".input");
-
 
 //add click handlers to all number buttons
 let numbers = document.querySelectorAll(".digit");
@@ -12,7 +10,6 @@ for (i of numbers) {
     display.innerHTML += this.innerHTML; 
   });
 }
-
 
 //adding click handlers to all operator buttons
 let operators= document.querySelectorAll(".operator");
@@ -32,14 +29,13 @@ let operator;
 let num1;
 let num2;
 
-
 //function that stores/displays values for variables above and passes them to main calc function as parameters.
 function prepCalc (){
 
    if (firstChar==="+" || "-"|| "&divide;" || "&times;") {
        //get operator
         operator = ar[0];
-        //then extract num2
+        //get num2
         num2 = parseFloat(string);
         //update display
         display.innerHTML=this.innerHTML;
