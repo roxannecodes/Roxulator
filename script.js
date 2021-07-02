@@ -1,7 +1,7 @@
 
 
 let display = document.querySelector(".input");
-let waitingForSecondOpperand=true;
+
 
 //add click handlers to all number buttons
 let numbers = document.querySelectorAll(".digit");
@@ -43,7 +43,6 @@ function getValues (){
         num2 = parseFloat(string);
         //update display
         display.innerHTML=this.innerHTML;
-        waitingForSecondOpperand=true;
    }
       
    else {
@@ -55,7 +54,7 @@ function getValues (){
    }
 
   display.innerHtml= operate(num1, operator, num2);
-  waitingForSecondOpperand=true;
+
 }
 
 
