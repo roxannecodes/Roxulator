@@ -32,7 +32,7 @@ let operator;
 let num1;
 let num2;
 
-
+/*
 
 function getValues {
 
@@ -58,6 +58,7 @@ function getValues {
   waitingForSecondOpperand=true;
 }
 
+*/
 
 
 // *** Main calculation function ***
