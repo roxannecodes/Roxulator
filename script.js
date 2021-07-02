@@ -1,4 +1,5 @@
 
+
 let display = document.querySelector(".input");
 let waitingForSecondOpperand=true;
 
@@ -16,6 +17,8 @@ let string=display.innerHTML;
 let ar = [string];
 let firstChar= ar[0];
 
+console.log(string);
+
 /*-----------*/
 let operators= document.querySelectorAll(".operator");
 let operator;
@@ -26,23 +29,23 @@ let num2;
 for (i of operators) {
 i.addEventListener("click", function() {
 
-  if ( firstChar === "1" || "2" ||"3"  ) {
+  if (firstChar==="+" || "-"|| "&divide;" || "&times;") {
+    //first extract operator
+        operator = ar[0];
+        //then extract num2
+        num2=parseInt(string);
+        //update display
+        display.innerHTML=this.innerHTML;
+      }
 
+ else {
+      //store num1 
+      num1= parseInt(string);
+  
       //update display with operator that was clicked
       display.innerHTML = this.innerHTML;
-      //store num1 
-      num1=string;
       waitingForSecondOpperand=false;
      }
-
-  else if (firstChar==="+") {
-        //first extract operator
-        //  operator = ;
-
-        //then extract num2
-        // num2= ;
-       
-      }
 });
 
     display.innerHtml= operate(num1, operator, num2);
