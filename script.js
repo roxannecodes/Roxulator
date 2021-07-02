@@ -13,44 +13,30 @@ for (i of numbers) {
   });
 }
 
+
+//adding click handlers to all operator buttons
+let operators= document.querySelectorAll(".operator");
+
+for (i of operators) {
+i.addEventListener("click", function() {
+
+display.innerHTML=this.innerHTML;
+});
+}
+
+
 let string=display.innerHTML;
 let ar = [string];
 let firstChar= ar[0];
 
-console.log(string);
+
 
 /*-----------*/
-let operators= document.querySelectorAll(".operator");
+
 let operator;
 let num1;
 let num2;
 
-//adding click handlers to all operator buttons
-for (i of operators) {
-i.addEventListener("click", function() {
-
-  if (firstChar==="+" || "-"|| "&divide;" || "&times;") {
-    //first extract operator
-        operator = ar[0];
-        //then extract num2
-        num2=parseInt(string);
-        //update display
-        display.innerHTML=this.innerHTML;
-      }
-
- else {
-      //store num1 
-      num1= parseInt(string);
-  
-      //update display with operator that was clicked
-      display.innerHTML = this.innerHTML;
-      waitingForSecondOpperand=false;
-     }
-});
-
-    display.innerHtml= operate(num1, operator, num2);
-    waitingForSecondOpperand=true;
-}
 
 
 // *** Main calculation function ***
