@@ -1,6 +1,5 @@
 
 let display = document.querySelector(".input");
-let resultDisplayed=false;
 let waitingForSecondOpperand=true;
 
 //add click handlers to all number buttons
@@ -8,58 +7,47 @@ let numbers = document.querySelectorAll(".digit");
 
 for (i of numbers) {
   i.addEventListener("click", function() {
-    
- //display num1 
-    if (resultDisplayed===false ){
-    display.innerHTML += this.innerHTML;
-    }
-
-    
+    //update the display after each entry
+    display.innerHTML += this.innerHTML; 
   });
 }
 
-//store num1 for later (main calc function)
-let num1 = display.innerHTML;
+let string=display.innerHTML;
+let ar = [string];
+let firstChar= ar[0];
+
+/*-----------*/
+let operators= document.querySelectorAll(".operator");
+let operator;
+let num1;
+let num2;
 
 //adding click handlers to all operator buttons
-let operators= document.querySelectorAll(".operator");
-
 for (i of operators) {
 i.addEventListener("click", function() {
 
-  if (waitingForSecondOpperand===true) {
-  display.innerHTML = this.value;
-  }
-  else if (waitingForSecondOpperand===false) {
-    display.innerHTML=this.value;
-    let operator=this.value;
-   //nest if statements for all 4 operators
-   if (operator=== "+") {
+  if ( firstChar === "1" || "2" ||"3"  ) {
 
-   }
-     
-  
+      //update display with operator that was clicked
+      display.innerHTML = this.innerHTML;
+      //store num1 
+      num1=string;
+      waitingForSecondOpperand=false;
+     }
 
-   
+  else if (firstChar==="+") {
+        //first extract operator
+        //  operator = ;
+
+        //then extract num2
+        // num2= ;
+       
+      }
+});
+
     display.innerHtml= operate(num1, operator, num2);
-  }
-});
-
-
+    waitingForSecondOpperand=true;
 }
-
-
-
-//adding click handler to equals btn and calling the main calculation function 
-
-let result=document.querySelector (".equals");
-
-result.addEventListener("click", function(){
-
-operate (num1, operator,num2);
-
-});
-
 
 
 // *** Main calculation function ***

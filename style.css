@@ -9,6 +9,7 @@ body {
   display: flex;
   flex-direction:column;
   text-align:center;
+  /* vertical-align: middle; */
   justify-content: center;
   align-items:center;
 }
@@ -18,7 +19,6 @@ text-align:center;
  font-family: 'Limelight', cursive;
  opacity: 0.8;
  font-size:3.5em;
-
 }
 
 
@@ -104,7 +104,7 @@ button {
 footer {
 color: black;
 padding:1em;
-padding-top:2.5em;
+padding-top:3em;
 padding-bottom:3em;
 font-size:15px;
 height:10px;
@@ -113,24 +113,21 @@ opacity:0.8;
 }
 
 
+/*  *** Media Queries *** ((TEMP using zoom))---- */
+@media screen and (max-width:768px){
+body {
+  zoom:0.9;
+}
+}
 
-/* 
- ***Media Queries*** ((TEMP))---- */
-
-
-
-@media screen and (max-width:600px){
-
+@media screen and (max-width:576px){
 body {
   zoom:0.8;
 }
-
 }
 
-@media screen and (max-width:400px){
-
+@media screen and (max-width:375px){
 body {
-  zoom:0.6;
+  zoom:0.7;
 }
-
 }
