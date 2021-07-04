@@ -75,7 +75,8 @@ function operate (num1, operator, num2) {
 
 //calculations
 function divide(a,b) {
-  result = parseFloat(a) / parseFloat (b) ;
+  answer = parseFloat(a) / parseFloat (b) ;
+  result=answer.toFixed(3);
 }
 function multiply(a,b) {
  result = parseFloat(a) * parseFloat(b);
