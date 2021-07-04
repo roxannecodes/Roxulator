@@ -9,7 +9,6 @@ body {
   display: flex;
   flex-direction:column;
   text-align:center;
-  /* vertical-align: middle; */
   justify-content: center;
   align-items:center;
 }
@@ -21,14 +20,6 @@ text-align:center;
  font-size:3.5em;
 }
 
-
-.wrapper {
-  display: flex;
-  flex-direction:column;
-   text-align:center;
-  align-items: center;
-  max-width:960px;
-}
 
 .calculator {
  width: 350px;
