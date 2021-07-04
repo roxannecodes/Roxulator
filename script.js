@@ -5,29 +5,27 @@ let operators= document.querySelectorAll(".operator");
 let equals = document.querySelector(".equals");
 let clear = document.querySelector(".clear");
 let allClear = document.querySelector(".all-clear");
+let operator = " ";
 let num1 =" ";
 let num2 =" ";
-let operator = " "
 let result;
 
 //add click handlers to all number buttons
 for (i of numbers) {
   i.addEventListener("click", function() {
-   number = this.value;
+   let number = this.innerHTML;
    inputNumber(number);
   });
 }
-
 //adding click handlers to all operator buttons
 for (i of operators) {
 i.addEventListener ("click", function() {
- operator =this.value;
+ operator =this.innerHTML;
  display.innerHTML = operator;
- console.log (operator);
 });
 }
 
-//equals button
+//equals button ** calls main calculation function with the values of parameters
 equals.addEventListener("click", function (){
  operate (num1, operator, num2);
  updateDisplay(result);
@@ -46,10 +44,9 @@ allClear.addEventListener("click", function() {
   location.reload();
 });
 
-
 //update display
-function updateDisplay (value) {
-  display.innerHTML = value;
+function updateDisplay (number) {
+  display.innerHTML = number;
 }
 
 //update/store numbers
@@ -62,7 +59,6 @@ function inputNumber(number) {
    updateDisplay(num2);
    }
 }
-
 
 // *** Main calculation function ***
 function operate (num1, operator, num2) {
@@ -79,23 +75,18 @@ function operate (num1, operator, num2) {
  else if (operator === "×") {
    return multiply(num1,num2)
  }
-
-
 }
 
 //calculations
 function divide(a,b) {
   result = parseFloat(a) / parseFloat (b) ;
 }
-
 function multiply(a,b) {
  result = parseFloat(a) * parseFloat(b);
 }
-
 function add(a,b) {
  result = parseFloat(a) + parseFloat(b);
 }
-
 function subtract(a, b) {
  result = parseFloat(a) - parseFloat(b);
 } 
