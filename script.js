@@ -1,4 +1,3 @@
-
 let display = document.querySelector(".input");
 let numbers = document.querySelectorAll(".digit");
 let operators= document.querySelectorAll(".operator");
@@ -8,24 +7,22 @@ let allClear = document.querySelector(".all-clear");
 let operator = " ";
 let num1 =" ";
 let num2 =" ";
-let result;
 
 //add click handlers to all number buttons
 for (i of numbers) {
   i.addEventListener("click", function() {
-   let number = this.innerHTML;
-   inputNumber(number);
+   inputNumber(this.innerHTML);
   });
 }
 //adding click handlers to all operator buttons
 for (i of operators) {
 i.addEventListener ("click", function() {
+ display.innerHTML = this.innerHTML;
  operator =this.innerHTML;
- display.innerHTML = operator;
 });
 }
 
-//equals button ** calls main calculation function with the values of parameters
+//equals button ** calls main calculation function with the values of parameters **
 equals.addEventListener("click", function (){
  operate (num1, operator, num2);
  updateDisplay(result);
@@ -44,12 +41,12 @@ allClear.addEventListener("click", function() {
   location.reload();
 });
 
-//update display
-function updateDisplay (number) {
+//Update display
+function updateDisplay(number) {
   display.innerHTML = number;
 }
 
-//update/store numbers
+//store and update numbers
 function inputNumber(number) {
  if (operator === " ") {
    num1 += number;
@@ -62,7 +59,6 @@ function inputNumber(number) {
 
 // *** Main calculation function ***
 function operate (num1, operator, num2) {
-
   if (operator==="+") {
    return add(num1, num2);
   }
@@ -90,3 +86,5 @@ function add(a,b) {
 function subtract(a, b) {
  result = parseFloat(a) - parseFloat(b);
 } 
+
+
