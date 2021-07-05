@@ -7,24 +7,26 @@ let allClear = document.querySelector(".all-clear");
 let operator = " ";
 let num1 =" ";
 let num2 =" ";
+let result;
 
 //add click handlers to all number buttons
 for (i of numbers) {
   i.addEventListener("click", function() {
-   inputNumber(this.innerHTML);
+   let number=this.innerHTML;
+   inputNumber(number);
   });
 }
 //adding click handlers to all operator buttons
 for (i of operators) {
 i.addEventListener ("click", function() {
- display.innerHTML = this.innerHTML;
- operator =this.innerHTML;
+ operator = this.innerHTML;
+ updateDisplay(operator);
 });
 }
 
 //equals button ** calls main calculation function with the values of parameters **
 equals.addEventListener("click", function (){
- operate (num1, operator, num2);
+ result = operate (num1, operator, num2);
  updateDisplay(result);
  num1 = result;
  num2 = "";
@@ -75,17 +77,21 @@ function operate (num1, operator, num2) {
 
 //calculations
 function divide(a,b) {
-  answer = parseFloat(a) / parseFloat (b) ;
-  result=answer.toFixed(3);
+  let answer = parseFloat(a) / parseFloat (b) ;
+  return answer.toFixed(3);
 }
+
 function multiply(a,b) {
- result = parseFloat(a) * parseFloat(b);
+ let answer= parseFloat(a) * parseFloat(b);
+ return answer;
 }
 function add(a,b) {
- result = parseFloat(a) + parseFloat(b);
+ let answer  = parseFloat(a) + parseFloat(b);
+ return answer;
 }
 function subtract(a, b) {
- result = parseFloat(a) - parseFloat(b);
+ let answer  = parseFloat(a) - parseFloat(b);
+ return answer;
 } 
 
 
