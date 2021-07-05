@@ -7,7 +7,6 @@ let allClear = document.querySelector(".all-clear");
 let operator = " ";
 let num1 =" ";
 let num2 =" ";
-let result;
 
 //add click handlers to all number buttons
 for (i of numbers) {
@@ -26,7 +25,7 @@ i.addEventListener ("click", function() {
 
 //equals button ** calls main calculation function with the values of parameters **
 equals.addEventListener("click", function (){
- result = operate (num1, operator, num2);
+ let result = operate (num1, operator, num2);
  updateDisplay(result);
  num1 = result;
  num2 = "";
