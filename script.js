@@ -47,7 +47,7 @@ function updateDisplay(number) {
   display.innerHTML = number;
 }
 
-//store and update numbers
+// Assign and update nums
 function inputNumber(number) {
  if (operator === " ") {
    num1 += number;
@@ -81,16 +81,14 @@ function divide(a,b) {
 }
 
 function multiply(a,b) {
- let answer= parseFloat(a) * parseFloat(b);
- return answer;
+ return parseFloat(a) * parseFloat(b);
 }
-function add(a,b) {
- let answer  = parseFloat(a) + parseFloat(b);
- return answer;
-}
-function subtract(a, b) {
- let answer  = parseFloat(a) - parseFloat(b);
- return answer;
-} 
 
+function add(a,b) {
+  return parseFloat(a) + parseFloat(b);
+}
+
+function subtract(a, b) {
+ return  parseFloat(a) - parseFloat(b)
+} 
 
